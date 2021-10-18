@@ -1,5 +1,5 @@
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef CURE_HPP
+# define CURE_HPP
 
 #include <iostream>
 #include "AMateria.hpp"
@@ -7,8 +7,6 @@
 
 class Cure : public AMateria
 {
-    private:
-        std::string name;
     public:
         Cure(std::string const &type);
         Cure(void);
