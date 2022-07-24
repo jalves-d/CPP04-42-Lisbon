@@ -2,7 +2,6 @@
 
 Animal::Animal(void)
 {
-    type = "Animal";
     std::cout << "Animal born!" << std::endl;
 }
 
@@ -14,7 +13,7 @@ Animal::~Animal(void)
 Animal &Animal::operator=(const Animal &cpy)
 {
     if (this == &cpy)
-    {   
+    {
         std::cout << "This Animal exist!" << std::endl;
         return (*this);
     }
@@ -22,6 +21,7 @@ Animal &Animal::operator=(const Animal &cpy)
     std::cout << "Animal cloned born!" << std::endl;
     return(*this);
 }
+
 Animal::Animal(const Animal &cpy)
 {
     if (this != &cpy)
@@ -36,8 +36,4 @@ Animal::Animal(const Animal &cpy)
 std::string Animal::getType(void)
 {
     return (type);
-}
-
-void    Animal::makeSound(void) const
-{
 }

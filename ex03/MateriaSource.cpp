@@ -2,7 +2,7 @@
 
 MateriaSource::MateriaSource()
 {
-    
+
 }
 
 MateriaSource::~MateriaSource()

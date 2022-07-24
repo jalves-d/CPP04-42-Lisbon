@@ -1,13 +1,13 @@
 #include "Character.hpp"
 
-Character::Character(void   )
+Character::Character(void)
 {
     this->name = "default";
     for(int i = 0; i < 4; i++)
 		inventory[i] = NULL;
 }
 
-Character::Character(std::string name)
+Character::Character(std::string const &name)
 {
     this->name = name;
     for(int i = 0; i < 4; i++)
@@ -50,7 +50,7 @@ const std::string &Character::getName() const
     return (name);
 }
 
-void Character::equip(AMateria* m)
+void Character::equip(AMateria *m)
 {
     int i = 0;
 
@@ -77,7 +77,7 @@ void Character::unequip(int idx)
         std::cout << "Invalid slot position !" << std::endl;
 }
 
-void Character::use(int idx, Character& target)
+void Character::use(int idx, Character &target)
 {
     if (idx >= 0 && idx < 4)
         inventory[idx]->use(target);

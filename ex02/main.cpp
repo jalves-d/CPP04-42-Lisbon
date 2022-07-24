@@ -1,7 +1,7 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-int main() 
+int main()
 {
 	Cat kinha;
 	{
@@ -10,7 +10,7 @@ int main()
 	}
 	kinha.getBrain();
 	Dog spike;
-	
+	Animal jose;
 	spike.getBrain();
 	spike.makeSound();
 	kinha.makeSound();

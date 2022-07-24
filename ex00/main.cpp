@@ -2,11 +2,12 @@
 #include "Dog.hpp"
 #include "WrongCat.hpp"
 
-int main() 
+int main()
 {
     Animal* meta = new Animal();
     Animal* j = new Dog();
     Animal* i = new Cat();
+
 	WrongAnimal* wrongmeta = new WrongAnimal();
 	WrongAnimal* k = new WrongCat();
 	std::cout << j->getType() << " " << std::endl;

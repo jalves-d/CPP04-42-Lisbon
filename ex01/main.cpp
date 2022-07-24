@@ -1,16 +1,19 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-int main() 
+int main()
 {
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+
 	Cat kinha;
-	{
-		Cat liza = kinha;
-	}
-	kinha.getBrain();
+	Cat *liza = new Cat(kinha);
+	kinha.getBrain()->getIdeas();
 	Dog spike;
-	
-	spike.getBrain();
+	liza->makeSound();
+	spike.getBrain()->getIdeas();
 	spike.makeSound();
 	kinha.makeSound();
+	delete j;
+	delete i;
 }

@@ -5,16 +5,17 @@
 #include "AMateria.hpp"
 #include "Ice.hpp"
 
-class MateriaSource : IMateriaSource
+class MateriaSource : public IMateriaSource
 {
-    private :
+    protected:
         AMateria *inventory[4];
+
     public :
         MateriaSource(void);
         ~MateriaSource(void);
         MateriaSource& operator=(const MateriaSource& cpy);
         MateriaSource(const MateriaSource& cpy);
-        void learnMateria(AMateria*);
+        void learnMateria(AMateria *m);
         AMateria* createMateria(std::string const &type);
 };
 
